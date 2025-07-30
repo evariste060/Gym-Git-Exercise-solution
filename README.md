@@ -164,7 +164,7 @@
 ```
 # Git exercise
 ## Bundle 1
-### Exercise 1
+### Exercise 2
 ```bash
   179  git add home.html
   180  git status
