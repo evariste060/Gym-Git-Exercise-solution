@@ -91,6 +91,32 @@ user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (dev)
 $ git push origin --delete test
 To https://github.com/evariste060/Gym-Git-Exercise-solution.git
  - [deleted] 
+```
+# Git exercise
+## Bundle 1
+### Exercise 1
+```bash
+  179  git add home.html
+  180  git status
+  181  git stash
+  182  echo >about.html
+  183  git add about.html
+  184  git stash
+182  echo >about.html
+  183  git add about.html
+  184  git stash
+  185  echo>team.html
+  186  git add team.html
+  187  git stash
+  188  git stash list
+  189  git stash pop stash@{1}
+  190  git stash pop stash@{1}
+  191  git commit -m 'new created file'
+  192  git push -u origin main
+  193  git stash pop
+  194  git reset --hard
+```
+
 
 
 
