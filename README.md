@@ -2,95 +2,165 @@
 ## Bundle 1
 ### Exercise 1
 ```Bash
-user@LAPTOP-300LKL1I MINGW64 ~ (main)
-$ cd git-exercise
+    9  mdkir myproject
+   10  mkdir myproject
+   11  cd myproject
+   12  echo hello> index.html
+   13  ls
+   14  git status
+   15  git init
+   16  git status
+   17  git add index.html
+   18  git status
+   19  git branch
+   20  git branch modified-index.html
+   21  git branch modified-index-html
+   22  git branch modified
+   23  cd ../
+   24  git branch modified
+   25  cd myproject
+   26  git status
+   27  git branch
+   28  code
+   29  code .
+   30  git branch modified
+   31  git branch -m main master
+   32  git branch
+   33  git branch modified
+   34  echo >README.md
+   35  ls
+   36  code .
+   37  git add --all
+   38  git status
+   39  git commit -m 'checking for how it works'
+   40  git branch
+   41  git branch modified-readme-file
+   42  git branch
+   43  git checkout modified-readme-file
+   44  git status
+   45  encho >style.css
+   46  echo >style.css
+   47  ls
+   48  git checkout -b emergency-fix
+   49  ls
+   50  git status
+   51  git branch -d emergency-fix
+   52  git commit -m 'added new file of style'
+   53  git add style.css
+   54  git commit -m 'added new file of style'
+   55  git status
+   56  git branch checkout master
+   57  git status
+   58  git checkout master
+   59  git status
+   60  ls
+   61  git branch -d emergency-fix
+   62  cd ../
+   63  clear
+   64  mkdir git-exercises
+   65  cd git-exercises
+   66  echo >inde.html
+   67  git mv ende.html index.html
+   68  clear
+   69  mkdir git-exercises
+   70  cd git-exercises
+   71  echo >index.html
+   72  echo >README.md
+   73  code .
+   74  git init
+   75  git branch -m master
+   76  git branch -m main
+   77  git add --all
+   78  git commit -m 'First commit'
+   80  git push -u origin main
+   90  git remote set-url origin https://github.com/evariste060/Gym-Git-Exercise-Solutions.git
+   91  git push origin main
+   92  git branch dev
+   93  git checkout dev
+   94  git branch test
+   95  git branch
+   96  git branch -d test
+   97  git branch -d dev
+   98  git checkout main
+   99  git branch -d dev
+  100  git branch
+  101  git branch dev
+  102  git push origin dev
+  103  git checkout dev
+  104  git branch test
+  105  git push origin test
+  106  git branch -d test
+  107  git push origin --delete test
+  108  git status
+  109  git  checkout main
+  110  git status
+  111  git add README.md
+  112  git status
+  113  cd ../
+  114  git status
+  115  cd ../
+  116  cd git-exercise
+  117  cd myproject
+  118  git status
+  119  ls
+  120  git add README.md
+  121  git commit -m 'updated README File'
+  122  git push origin main
+  123  git push origin master
+  124  git remote
+  125  git remote add https://github.com/evariste060/Gym-Git-Exercise-Solutions.git
+  126  git status
+  127  git branch -m master main
+  128  git status
+  129  git push origin main
+  130  git push -u origin main
+  131  clear
+  132  echo >index.html
+  133  echo >README.md
+  134  git init
+  135  git branch -m master
+  136  git branch main
+  137  git branch -m main
+  138  git branch -m main master
+  139  clear
+  140  cd ../
+  141  mkdir git-exercise
+  142  git init
+  143  echo >index.html
+  144  echo >README.md
+  145  cd .
+  146  code .
+  147  cd git-exercise
+  148  code .
+  149  echo >index.html
+  150  echo >README.md
+  151  git init
+  152  git branch -m main master
+  153  git branch -m master main
+  154  git add --all
+  155  git status
+  156  git commit -m ' initial commit'
+  157  git remote add origin https://github.com/evariste060/Gym-Git-Exercise-solution.git
+  158  git push -u origin main
+  159  git branch dev
+  160  git branch list
+  161  git branch
+  162  git branch -d list
+  163  git branch push dev
+  164  git push origin dev
+  165  git checkout dev
+  166  git branch test
+  167  git push origin test
+  168  git branch -d test
+  169  git push --delete test
+  170  git push origin --delete test
+  171  git status
+  172  git checkout main
+  173  git status
+  174  git add README.md
+  175  git commit -m 'update README File '
+  176  git push -u origin main
 
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ code .
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ echo >index.html
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ echo >README.md
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git init
-Initialized empty Git repository in C:/Users/user/git-exercise/.git/
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git branch -m main master
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (master)
-$ git branch -m master main
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git add --all
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git status
-On branch main
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-        new file:   README.md
-        new file:   index.html
-
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git commit -m ' initial commit'
-[main (root-commit) 2750fa4]  initial commit
- 2 files changed, 12 insertions(+)
- create mode 100644 README.md
- create mode 100644 index.html
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git remote add origin https://github.com/evariste060/Gym-Git-Exercise-solution.git
-
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git push -u origin main
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (4/4), 418 bytes | 418.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-To https://github.com/evariste060/Gym-Git-Exercise-solution.git
- * [new branch]      main -> main
-branch 'main' set up to track 'origin/main'.
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git branch dev
-ser@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
-$ git push origin dev
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote:
-remote: Create a pull request for 'dev' on GitHub by visiting:
-remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/dev
-remote:
-To https://github.com/evariste060/Gym-Git-Exercise-solution.git
- * [new branch]      dev -> dev
- user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (dev)
-$ git branch test
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (dev)
-$ git push origin test
-Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
-remote:
-remote: Create a pull request for 'test' on GitHub by visiting:
-remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/test
-remote:
-To https://github.com/evariste060/Gym-Git-Exercise-solution.git
- * [new branch]      test -> test
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (dev)
-$ git branch -d test
-Deleted branch test (was 2750fa4).
-user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (dev)
-$ git push origin --delete test
-To https://github.com/evariste060/Gym-Git-Exercise-solution.git
- - [deleted] 
 ```
 # Git exercise
 ## Bundle 1
