@@ -711,6 +711,99 @@ To https://github.com/evariste060/Gym-Git-Exercise-solution.git
 branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 
 ```
+# Exercise 2
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git add home.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git commit -m 'update home page'
+[main b3727d4] update home page
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   2c1fba0..b3727d4  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git  add home.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git commit -m 'update home pages'
+[ft/home-page-redesign cbe28a9] update home pages
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.50 KiB | 1.50 MiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
+
 
 
 
