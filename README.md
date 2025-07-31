@@ -489,8 +489,231 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/evariste060/Gym-Git-Exercise-solution.git
    4ef73be..acbc7c7  ft/service-redesign -> ft/service-redesign
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+```
+# Bundle 3
+## Exercise 1
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git add team.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git commit -m 'added page of team'
+[ft/team-page b84f49b] added page of team
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git push -u ft/team-page
+fatal: 'ft/team-page' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 448 bytes | 448.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/team-page
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ ^C
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git branch ft/contact-page
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git log
+commit b84f49bf355208806cb8df9b20c9ea6534e1eec7 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 13:02:01 2025 +1100
+
+    added page of team
+
+commit 7a8b2dda12cf5c362de1d4f7f46defb469ce874e (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 12:49:00 2025 +1100
+
+    Updated README  file including bundle 2 Exercise 2
+
+commit 9d4aa1e231c50c8274a67b68f24f031db3c86b2b
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 12:05:59 2025 +1100
+
+    this may be good appearance of the services pages
+
+commit d9b7ee450f74c71748765c29dffd50bc8e9ec1b1
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 11:27:44 2025 +1100
+
+    updated README file with bundle2 exercise 1
+
+commit 329120f2782e4f1aac49202d062c956f9e07fccc
+Merge: 947eba5 91ece85
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 11:16:01 2025 +1100
+
+    Merge branch 'ft/bundle-2'
+    Added new HTML pages of services
+
+commit 91ece85868983e064144d0d26139845efa8e8877 (origin/ft/bundle-2, ft/bundle-2)
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Thu Jul 31 10:11:13 2025 +1100
+
+    added pages of services
+
+commit 9465fc592c9a1154e865f461c4ec391a202e75dd
+Author: Evariste Nkurunziza <nkurunzizaevariste060@gmail.com>
+Date:   Wed Jul 30 21:54:35 2025 +1100
+
+    added services pages
+
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git cherry-pick b84f49bf355208806cb8df9b20c9ea6534e1eec7
+[ft/contact-page 0b5f5c2] added page of team
+ Date: Thu Jul 31 13:02:01 2025 +1100
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ ls
+README.md  about.html  home.html  index.html  services.html  team.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git add contact.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git commit -m 'added page of contact'
+[ft/contact-page 4d5af9d] added page of contact
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 737 bytes | 368.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/contact-page
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git branch ft/faq-page
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/contact-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git add faq.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git commit -m 'added faq page'
+[ft/faq-page 4c39fb5] added faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 438 bytes | 438.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/faq-page
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git revert b84f49bf355208806cb8df9b20c9ea6534e1eec7
+[ft/faq-page 315b962] Revert "added page of team"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 287 bytes | 287.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   4c39fb5..315b962  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 
 ```
+
+
+
 
 
 
