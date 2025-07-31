@@ -904,6 +904,150 @@ Writing objects: 100% (47/47), 9.44 KiB | 568.00 KiB/s, done.
 Total 47 (delta 24), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (24/24), done.
 ```
+# Exercise 3
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git add footer.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git commit -m 'add a footer pages'
+[ft/footer d1a603c] add a footer pages
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git git add footer.html
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git add footer.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git commit -m 'Update footer pages with new location'
+[ft/footer 10feee4] Update footer pages with new location
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git push -u origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 715 bytes | 715.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/footer
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git push -u git-copy ft/footer
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.33 KiB | 1.33 MiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution2/pull/new/ft/footer
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution2.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'git-copy/ft/footer'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/footer)
+$ git checkout main
+M       home.html
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git merge -squash ft/footer
+Could not find merge strategy 'quash'.
+Available strategies are: octopus ours recursive resolve subtree.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating 470a6c4..10feee4
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git commit -m 'footer changes squashing'
+[ft/squashing 47b22ca] footer changes squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git push -u origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 459.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/squashing
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/squashing)
+$ git push -u git-copy ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 459 bytes | 459.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution2/pull/new/ft/squashing
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution2.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'git-copy/ft/squashing'.
+
+```
+
 
 
 
