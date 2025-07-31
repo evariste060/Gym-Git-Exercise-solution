@@ -803,7 +803,107 @@ To https://github.com/evariste060/Gym-Git-Exercise-solution.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+# Bundle 4
+## Exercise 1
+```bash
 
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git remote add git-copy https://github.com/evariste060/Gym-Git-Exercise-solution2.git
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git add home.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git commit -m 'Update home page of our projects'
+[main 34f14fc] Update home page of our projects
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   8abffc9..34f14fc  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u git-copy main
+Enumerating objects: 47, done.
+Counting objects: 100% (47/47), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (46/46), done.
+Writing objects: 100% (47/47), 9.44 KiB | 568.00 KiB/s, done.
+Total 47 (delta 24), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (24/24), done.
+To https://github.com/evariste060/Gym-Git-Exercise-solution2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'git-copy/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git remote add git-copy https://github.com/evariste060/Gym-Git-Exercise-solution2.git
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git add home.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git commit -m 'Update home page of our projects'
+[main 34f14fc] Update home page of our projects
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 367 bytes | 367.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   8abffc9..34f14fc  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u git-copy main
+Enumerating objects: 47, done.
+Counting objects: 100% (47/47), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (46/46), done.
+Writing objects: 100% (47/47), 9.44 KiB | 568.00 KiB/s, done.
+Total 47 (delta 24), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (24/24), done.
+```
 
 
 
