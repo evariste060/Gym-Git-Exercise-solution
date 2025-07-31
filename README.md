@@ -2,7 +2,6 @@
 ## Bundle 1
 ### Exercise 1
 ```Bash
-    9  mdkir myproject
    10  mkdir myproject
    11  cd myproject
    12  echo hello> index.html
@@ -162,8 +161,6 @@
   176  git push -u origin main
 
 ```
-# Git exercise
-## Bundle 1
 ### Exercise 2
 ```bash
   179  git add home.html
@@ -185,6 +182,134 @@
   192  git push -u origin main
   193  git stash pop
   194  git reset --hard
+```
+## Bundle 2
+### Exercise 1
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~ (main)
+$ cd git-exercise
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git branch
+  dev
+* ft/bundle-2
+  main
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ ls
+README.md  about.html  home.html  index.html  services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git add services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git stash
+Saved working directory and index state WIP on ft/bundle-2: 9465fc5 added services pages
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git stash pop
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (c3a401f3eaf7f06009421ba6b2cd7c2b49e7b280)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git add services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git commit -m 'added pages of services'
+[ft/bundle-2 91ece85] added pages of services
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 702 bytes | 702.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/bundle-2
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/bundle-2)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git merge --no-ff ft/bundle-2
+Merge made by the 'ort' strategy.
+ services.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ ls
+README.md  about.html  home.html  index.html  services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 265 bytes | 265.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   947eba5..329120f  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$
 ```
 
 
