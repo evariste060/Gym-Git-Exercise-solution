@@ -311,6 +311,187 @@ branch 'main' set up to track 'origin/main'.
 user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
 $
 ```
+## Bundle 2
+### Exercise 2
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git pull
+Already up to date.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git branch ft/service-redesign
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git  checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git add services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git commit -m 'designed pages of services
+> git commit -m 'designed pages of services'
+> git status
+> q
+>
+.git/          about.html     index.html
+README.md      home.html      services.html
+> :
+> :wq
+> ^C
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git commit -m 'designed pages of services '
+[ft/service-redesign 4ef73be] designed pages of services
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 349 bytes | 349.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/evariste060/Gym-Git-Exercise-solution/pull/new/ft/service-redesign
+remote:
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git add services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git commit -m 'this may be good appearance of the services pages'
+[main 9d4aa1e] this may be good appearance of the services pages
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 368.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   d9b7ee4..9d4aa1e  main -> main
+branch 'main' set up to track 'origin/main'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git diff main ft/service-redesign
+diff --git a/services.html b/services.html
+index ba9f577..cc4b503 100644
+--- a/services.html
++++ b/services.html
+@@ -3,9 +3,10 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Services </title>
++    <title>Services vail </title>
+ </head>
+ <body>
+-    This may be good to you just test it
++    updated varsion of services pages
++    Here is services we offer
+ </body>
+ </html>
+\ No newline at end of file
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign|MERGING)
+$ git add services.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign|MERGING)
+$ git commit
+[ft/service-redesign acbc7c7] Merge branch 'main' into ft/service-redesign
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-exercise (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 414 bytes | 414.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/Gym-Git-Exercise-solution.git
+   4ef73be..acbc7c7  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+```
+
 
 
 
