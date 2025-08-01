@@ -1047,7 +1047,58 @@ To https://github.com/evariste060/Gym-Git-Exercise-solution2.git
 branch 'ft/squashing' set up to track 'git-copy/ft/squashing'.
 
 ```
+# Bundle 5
+## Exercise 2
+```bash
+user@LAPTOP-300LKL1I MINGW64 ~ (main)
+$ git clone https://github.com/evariste060/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 2.63 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
 
+user@LAPTOP-300LKL1I MINGW64 ~ (main)
+$ cd git-cafe-exercise
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (main)
+$ code .
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (main)
+$ git add index.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (main)
+$ git commit -m 'change index.html file'
+[main 7dbe6b0] change index.html file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/evariste060/git-cafe-exercise.git
+   d1d3f9c..7dbe6b0  main -> main
+branch 'main' set up to track 'origin/main'.
+```
 
 
 
