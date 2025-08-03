@@ -1151,6 +1151,110 @@ To https://github.com/evariste060/git-cafe-exercise.git
  * [new branch]      new/feature -> new/feature
 branch 'new/feature' set up to track 'origin/new/feature'.
 ```
+## Exerces 2
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~ (main)
+$ cd git-cafe-exercise
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (new/feature)
+$ git status
+On branch new/feature
+Your branch and 'origin/new/feature' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (new/feature)
+$ git checkout -b bug/fix
+Switched to a new branch 'bug/fix'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git status
+On branch bug/fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git add index-4.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git commit -m 'change a title of a page'
+[bug/fix e8acad9] change a title of a page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git push -u origiin bug/fix
+fatal: 'origiin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git push -u origin bug/fix
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1013 bytes | 1013.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug/fix' on GitHub by visiting:
+remote:      https://github.com/evariste060/git-cafe-exercise/pull/new/bug/fix
+remote:
+To https://github.com/evariste060/git-cafe-exercise.git
+ * [new branch]      bug/fix -> bug/fix
+branch 'bug/fix' set up to track 'origin/bug/fix'.
+```
+## Exercise 3
+```bash
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (bug/fix)
+$ git checkout -b hot-fix
+Switched to a new branch 'hot-fix'
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (hot-fix)
+$ git status
+On branch hot-fix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (hot-fix)
+$ git add index-4.html
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (hot-fix)
+$ git commit -m 'change a phone number'
+[hot-fix 6a35534] change a phone number
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-300LKL1I MINGW64 ~/git-cafe-exercise (hot-fix)
+$ git push -u origin hot-fix
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'hot-fix' on GitHub by visiting:
+remote:      https://github.com/evariste060/git-cafe-exercise/pull/new/hot-fix
+remote:
+To https://github.com/evariste060/git-cafe-exercise.git
+ * [new branch]      hot-fix -> hot-fix
+branch 'hot-fix' set up to track 'origin/hot-fix'.
+```
 
 
 
